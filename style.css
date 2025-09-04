@@ -1,0 +1,177 @@
+:root {
+  --primary-color: #f2b90d;
+  --secondary-color: #ffde7a;
+  --accent-color: #4CAF50;
+  --text-primary: #181611;
+  --text-secondary: #5a5a5a;
+  --bg-light: #fdfaf5;
+  --bg-dark: #3a2e00;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+}
+
+.hexagon {
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  height: 80px;
+}
+
+.header_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.header_icon img{
+  width: 50px;
+  height: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+.hero-section {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.products-section .product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products-section .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.products-section .product-hex {
+  width: 100%;
+  height: 224px;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+footer {
+  background-color: white;
+  padding: 3rem 1.5rem;
+}
+
+footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+.view-all_products {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #f3b600; 
+    border-radius: 12px;        
+    color: #f3b600;             
+    font-weight: bold;
+    text-decoration: none;      
+    transition: all 0.3s ease;
+}
+
+.view-all_products:hover {
+    background-color: #f3b600;  
+    color: #ffffff;            
+}
+
+:root {
+  --primary-color: #f2b90d; /* თქვენი მთავარი ყვითელი ფერი */
+  --bg-dark: #3f3a2c; /* მუქი ტექსტის ფერი */
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  height: 40px; /* 10 * 0.25rem = 2.5rem = 40px */
+  padding-left: 20px; /* 5 * 0.25rem = 1.25rem = 20px */
+  padding-right: 20px;
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+  font-size: 14px; /* 0.875rem = 14px */
+  font-weight: bold;
+  border: none;
+  border-radius: 9999px; /* სრულიად მრგვალი ფორმისთვის */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: rgba(242, 185, 13, 0.9); /* ფერი 90% გამჭვირვალობით */
+}

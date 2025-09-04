@@ -1,0 +1,11 @@
+
+:root {
+  --primary-color: #f2b90d;
+  --secondary-color: #f5e4a8;
+  --text-color: #3f3a2c;
+  --background-color: #fffcf2;
+  --green-color: #4b5443;
+ };
+.honeycomb-check {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+ };
