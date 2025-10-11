@@ -1,0 +1,62 @@
+<style>
+.card {
+  position: relative;
+  display: inline-block;
+  margin: 50px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Popup box */
+.card .info {
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Hover-ზე გამოჩენა */
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+</style>
+
+<div class="card">
+  📱 iPhone 16 Pro
+  <div class="info">
+    <h3>iPhone 16 Pro</h3>
+    <p>ახალი მოდელი, 256GB მეხსიერება, ფასი 3200₾
+        ddddddddddddddddddddddd
+    ddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddd
+ddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddd</p>
+  </div>
+</div>
+
+<div class="card">
+  📱 iPhone 16 Pro
+  <div class="info">
+    <h3>iPhone 16 Pro</h3>
+    <p>ახალი მოდელი, 256GB მეხსიერება, ფასი 3200₾
+        ddddddddddddddddddddddd
+    ddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddd
+ddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddd</p>
+  </div>
+</div>

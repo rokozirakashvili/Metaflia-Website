@@ -24,14 +24,42 @@
         <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
             <div class="container mx-auto flex items-center justify-between px-6 py-4">
                 <div class="flex items-center gap-3 text-[var(--text-primary)]">
-                    <div class="flex items-center gap-3 text-[var(--text-primary)]">
-                        <div class="header_icon" class="w-8 h-8 text-[var(--primary-color)]">
-                            <img src="icons/metaflia icon.png" alt="Metaflia">
-                            <a class="text-2xl font-bold tracking-tight" href="index.html">მეთაფლია</a>
-                        </div>
+                    <div class="header_icon">
+                        <img src="icons/metaflia icon.png" alt="Metaflia" class="w-8 h-8 object-contain">
                     </div>
+                    <a class="text-2xl font-bold tracking-tight" href="index.html">მეთაფლია</a>
                 </div>
+
+
+                <!-- Desktop Menu -->
                 <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                        href="index.html">მთავარი</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                        href="products.html">პროდუქტები</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                        href="about us.html">ჩვენს შესახებ</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                        href="contact.html">კონტაქტი</a>
+                </nav>
+
+                <!-- CTA Button (desktop only) -->
+                <button onclick="window.location.href='shop now.html'"
+                    class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                    <span class="truncate">შეიძინეთ ახლავე</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-[var(--text-primary)] focus:outline-none text-3xl">
+                        &#9776; <!-- ☰ სამი ხაზი -->
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (დამალული default) -->
+            <div id="mobile-menu" class="hidden flex-col md:hidden bg-white shadow-md">
+                <div class="flex flex-col md:flex-row items-center gap-4 px-6 py-4">
                     <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                         href="index.html">მთავარი</a>
                     <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
@@ -42,12 +70,22 @@
                         href="#">ბლოგი</a>
                     <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                         href="contact.html">კონტაქტი</a>
-                </nav>
-                <a href="shop now.html" class="custom-button">
-                    შეიძინეთ ახლავე
-                </a>
+                    <button onclick="window.location.href='shop now.html'"
+                        class="min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                        <span class="truncate">შეიძინეთ ახლავე</span>
+                    </button>
+                </div>
             </div>
+
         </header>
+        <script>
+            const menuBtn = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        </script>
         <div class="flex-grow">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
                 <div class="text-center mb-12">

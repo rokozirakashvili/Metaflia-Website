@@ -1,49 +1,92 @@
-<html>
+<!DOCTYPE html>
+<html lang="ka">
 
 <head>
+  <meta charset="utf-8" />
+  <title>მეთაფლია</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="products.css">
-   <link rel="icon" href="icons/header icon.png">
-    <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="icon" href="icons/header icon.png">
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
   <link as="style"
     href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700"
     onload="this.rel='stylesheet'" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <meta charset="utf-8" />
-  <title>მეთაფლია</title>
-  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 
 <body class="bg-[#fcfaf5]">
-              <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-                <div class="container mx-auto flex items-center justify-between px-6 py-4">
-                    <div class="flex items-center gap-3 text-[var(--text-primary)]">
-                        <div class="flex items-center gap-3 text-[var(--text-primary)]">
-                            <div class="header_icon" class="w-8 h-8 text-[var(--primary-color)]">
-                                <img src="icons/metaflia icon.png" alt="Metaflia">
-                                <a class="text-2xl font-bold tracking-tight" href="index.html">მეთაფლია</a>
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="hidden md:flex items-center gap-8">
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="index.html">მთავარი</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="products.html">პროდუქტები</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="about us.html">ჩვენს შესახებ</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="#">ბლოგი</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="contact.html">კონტაქტი</a>
-                    </nav>
-                      <a href="shop now.html" class="custom-button">
-                        შეიძინეთ ახლავე
-                      </a>
-                </div>
-            </header>
+  <!-- Header -->
+      <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+         <div class="container mx-auto flex items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-3 text-[var(--text-primary)]">
+               <div class="header_icon">
+                  <img src="icons/metaflia icon.png" alt="Metaflia" class="w-8 h-8 object-contain">
+               </div>
+               <a class="text-2xl font-bold tracking-tight" href="index.html">მეთაფლია</a>
+            </div>
+
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8">
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="index.html">მთავარი</a>
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="products.html">პროდუქტები</a>
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="about us.html">ჩვენს შესახებ</a>
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="contact.html">კონტაქტი</a>
+            </nav>
+
+            <!-- CTA Button (desktop only) -->
+            <button onclick="window.location.href='shop now.html'"
+               class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+               <span class="truncate">შეიძინეთ ახლავე</span>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+               <button id="menu-btn" class="text-[var(--text-primary)] focus:outline-none text-3xl">
+                  &#9776; <!-- ☰ სამი ხაზი -->
+               </button>
+            </div>
+         </div>
+
+         <!-- Mobile Menu (დამალული default) -->
+         <div id="mobile-menu" class="hidden flex-col md:hidden bg-white shadow-md">
+            <div class="flex flex-col md:flex-row items-center gap-4 px-6 py-4">
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="index.html">მთავარი</a>
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="products.html">პროდუქტები</a>
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="about us.html">ჩვენს შესახებ</a>
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="#">ბლოგი</a>
+               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                  href="contact.html">კონტაქტი</a>
+               <button onclick="window.location.href='shop now.html'"
+                  class="min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                  <span class="truncate">შეიძინეთ ახლავე</span>
+               </button>
+            </div>
+         </div>
+   <script defer>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuBtn && mobileMenu) {
+         menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+         });
+      }
+   </script>
+
+      </header>
+
+  <!-- Main -->
   <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
     style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
     <div class="layout-container flex h-full grow flex-col">
@@ -56,83 +99,65 @@
                 <p class="max-w-[600px] text-[#8a8060] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   დაგვიკავშირდით ნებისმიერ დროს.</p>
               </div>
-              <div class="w-full h-96 rounded-xl overflow-hidden">
-                <iframe allowfullscreen="" height="100%" loading="lazy"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.9295392021177!2d44.76675077555171!3d41.720646575258506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044732df20b31e7%3A0xa4aadd15e7791478!2z4YOb4YOU4YOX4YOQ4YOk4YOa4YOY4YOQ!5e1!3m2!1ska!2sge!4v1756890274079!5m2!1ska!2sge"
-                  style="border:0;" width="100%"></iframe>
-              </div>
+              <div class="w-full h-96 rounded-xl overflow-hidden"> <iframe allowfullscreen="" height="100%"
+                  loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.7526147054614!2d44.7710185755519!3d41.72486517499516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473002efd2ab9%3A0xc194e910f5f3a6!2z4YOb4YOU4YOX4YOQ4YOk4YOa4YOY4YOQ!5e1!3m2!1ska!2sge!4v1757235904464!5m2!1ska!2sge"
+                  style="border:0;" width="100%"></iframe> </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="flex items-start gap-4">
-                  <div class="bg-[#f5f3f0] rounded-lg p-3 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-[#181611]">phone</span>
-                  </div>
+                  <div class="bg-[#f5f3f0] rounded-lg p-3 flex items-center justify-center"> <span
+                      class="material-symbols-outlined text-[#181611]">phone</span> </div>
                   <div>
                     <h3 class="text-lg font-semibold text-[#181611]">ტელეფონი</h3>
                     <p class="text-[#8a8060]">595251221</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
-                  <div class="bg-[#f5f3f0] rounded-lg p-3 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-[#181611]">email</span>
-                  </div>
+                  <div class="bg-[#f5f3f0] rounded-lg p-3 flex items-center justify-center"> <span
+                      class="material-symbols-outlined text-[#181611]">email</span> </div>
                   <div>
                     <h3 class="text-lg font-semibold text-[#181611]">ელ. ფოსტა</h3>
                     <p class="text-[#8a8060]">metaflia8@gmail.com</p>
                   </div>
                 </div>
               </div>
-              <div class="flex gap-4">
-                <a class="flex items-center justify-center size-10 bg-[#f5f3f0] text-[#181611] rounded-lg hover:bg-zinc-200 transition-colors"
-                  href="https://www.facebook.com/profile.php?id=100063583172519" target="_blank">
-                  <svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
-                    xmlns="http://www.w3.org/2000/svg">
+              <div class="flex gap-4"> <a
+                  class="flex items-center justify-center size-10 bg-[#f5f3f0] text-[#181611] rounded-lg hover:bg-zinc-200 transition-colors"
+                  href="https://www.facebook.com/profile.php?id=100063583172519" target="_blank"> <svg class="h-6 w-6"
+                    fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                  </svg>
-                </a>
-                <a class="flex items-center justify-center size-10 bg-[#f5f3f0] text-[#181611] rounded-lg hover:bg-zinc-200 transition-colors"
-                  href="https://www.instagram.com/metaflia.l.t.d/" target="_blank">
-                  <svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
-                    xmlns="http://www.w3.org/2000/svg">
+                  </svg> </a> <a
+                  class="flex items-center justify-center size-10 bg-[#f5f3f0] text-[#181611] rounded-lg hover:bg-zinc-200 transition-colors"
+                  href="https://www.instagram.com/metaflia.l.t.d/" target="_blank"> <svg class="h-6 w-6" fill="none"
+                    height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                     <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                  </svg>
-                </a>
-              </div>
+                  </svg> </a> </div>
             </div>
             <div class="flex flex-col space-y-6 bg-white p-8 rounded-xl shadow-sm">
               <div class="space-y-2">
                 <h2 class="text-3xl font-bold text-[#181611]">მოგვწერეთ შეტყობინება</h2>
                 <p class="text-[#8a8060]">დაგიბრუნდებით რაც შეიძლება მალე.</p>
               </div>
-              <form class="space-y-4">
-                <div class="space-y-2">
-                  <label
+              <form id="contact-form" class="space-y-4">
+                <div class="space-y-2"> <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#181611]"
-                    for="name">სახელი</label>
-                  <input
+                    for="name">სახელი</label> <input
                     class="form-input flex w-full rounded-lg border border-[#e6e3db] bg-transparent px-3 py-2 text-sm text-[#181611] placeholder:text-[#8a8060] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)]"
-                    id="name" placeholder="შეიყვანეთ თქვენი სახელი" />
-                </div>
-                <div class="space-y-2">
-                  <label
+                    id="name" name="from_name" placeholder="შეიყვანეთ თქვენი სახელი" /> </div>
+                <div class="space-y-2"> <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#181611]"
-                    for="email">ელ. ფოსტა</label>
-                  <input
+                    for="email">ელ. ფოსტა</label> <input
                     class="form-input flex w-full rounded-lg border border-[#e6e3db] bg-transparent px-3 py-2 text-sm text-[#181611] placeholder:text-[#8a8060] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)]"
-                    id="email" placeholder="შეიყვანეთ თქვენი ელ. ფოსტა" type="email" />
-                </div>
-                <div class="space-y-2">
-                  <label
+                    id="email" name="from_email" placeholder="შეიყვანეთ თქვენი ელ. ფოსტა" type="email" /> </div>
+                <div class="space-y-2"> <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#181611]"
-                    for="message">შეტყობინება</label>
-                  <textarea
+                    for="message">შეტყობინება</label> <textarea
                     class="form-textarea flex w-full rounded-lg border border-[#e6e3db] bg-transparent px-3 py-2 text-sm text-[#181611] placeholder:text-[#8a8060] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)] min-h-[120px]"
-                    id="message" placeholder="შეიყვანეთ თქვენი შეტყობინება"></textarea>
-                </div>
-                <button
+                    id="message" name="message" placeholder="შეიყვანეთ თქვენი შეტყობინება"></textarea> </div> <button
                   class="inline-flex items-center justify-center rounded-lg text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-6 w-full bg-[var(--primary-color)] text-[#181611] hover:bg-yellow-400"
                   type="submit">გაგზავნა</button>
               </form>
@@ -142,6 +167,31 @@
       </section>
     </div>
   </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('dD5apLEDBifmBvtDg'); // შენი Public Key
+    })();
+
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!this.checkValidity()) {
+        alert('გთხოვთ, შეავსოთ ყველა სავალდებულო ველი.');
+        return;
+      }
+
+      emailjs.sendForm('service_w47to2c', 'template_5s2ac35', this)
+        .then(function () {
+          window.location.href = "thankyou.html";
+        }, function (error) {
+          alert('შეტყობინების გაგზავნა ვერ მოხერხდა, სცადეთ მოგვიანებით.');
+          console.log('FAILED...', error);
+        });
+    });
+  </script>
 
 </body>
 

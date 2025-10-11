@@ -15,47 +15,72 @@
    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
    <link rel="stylesheet" href="style.css" />
    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
 </head>
 
 <body class="bg-[var(--bg-light)] text-[var(--text-primary)]">
    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
-            <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-                <div class="container mx-auto flex items-center justify-between px-6 py-4">
-                    <div class="flex items-center gap-3 text-[var(--text-primary)]">
-                        <div class="flex items-center gap-3 text-[var(--text-primary)]">
-                            <div class="header_icon" class="w-8 h-8 text-[var(--primary-color)]">
-                                <img src="icons/metaflia icon.png" alt="Metaflia">
-                                <a class="text-2xl font-bold tracking-tight" href="index.html">მეთაფლია</a>
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="hidden md:flex items-center gap-8">
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="index.html">მთავარი</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="products.html">პროდუქტები</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="about us.html">ჩვენს შესახებ</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="#">ბლოგი</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="contact.html">კონტაქტი</a>
-                    </nav>
-                      <a href="shop now.html" class="custom-button">
-                        შეიძინეთ ახლავე
-                      </a>
-                </div>
-            </header>
+      <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+         <div class="container mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+               <img src="icons/metaflia icon.png" alt="Metaflia" class="w-8 h-8 object-contain">
+               <a href="index.html" class="text-2xl font-bold tracking-tight text-[var(--text-primary)]">მეთაფლია</a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+               <a href="index.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">მთავარი</a>
+               <a href="products.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">პროდუქტები</a>
+               <a href="about us.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">ჩვენს
+                  შესახებ</a>
+               <a href="contact.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">კონტაქტი</a>
+            </nav>
+
+            <!-- Desktop Button -->
+            <button onclick="window.location.href='shop now.html'"
+               class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+               შეიძინეთ ახლავე
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-3xl text-[var(--text-primary)]" id="mobile-menu-btn">&#9776;</button>
+         </div>
+
+         <!-- Mobile Menu -->
+         <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center gap-4 px-6 py-4 bg-white shadow-md">
+            <a href="index.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">მთავარი</a>
+            <a href="products.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">პროდუქტები</a>
+            <a href="about us.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">ჩვენს
+               შესახებ</a>
+            <a href="#"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">ბლოგი</a>
+            <a href="contact.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">კონტაქტი</a>
+            <button onclick="window.location.href='shop now.html'"
+               class="min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+               შეიძინეთ ახლავე
+            </button>
+         </div>
+      </header>
+
       <main class="flex-grow">
          <section class="relative h-[600px] flex items-center justify-center text-white">
             <div class="absolute inset-0 bg-cover bg-center"
-               style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQ0848INRP8heArQVkWEWA9louB_sPsru9uSuuIxQ9Fg4zcpX87EQlQhbfapba4h7QcpMk_Idg3Olmz9sZJLkRkaoW8YD5GkuFsH-XOJarUZxRsWE39llkZJFV7N6XdEsrTs4UMNczI1-hSMOE9mWs3JTX2HoJvPc1MiMn9K39mh6fibIoLuqimSjQijwzHX-2Z_QRQMCs1iHAX1Atk6qSl1bTM49Eq4yrrAqr552d8v-HDEoN_Y6IFfTzJVt0X0ZurK4mrIgDiQc");'>
+               style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("images/main_image.png");'>
             </div>
             <div class="relative z-10 text-center px-4">
                <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">აღმოაჩინეთ ბუნებრივი საგანძური</h1>
                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 drop-shadow-md">აღმოაჩინეთ საუკეთესო თაფლი,
                   ბუნებრივი ფუტკრის პროდუქტები და მათი ნაზავები</p>
-               <button
+               <button onclick="window.location.href='products.html'"
                   class="flex mx-auto items-center justify-center rounded-full h-14 px-8 bg-[var(--primary-color)] text-[var(--bg-dark)] text-lg font-bold shadow-xl hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300">
                   <span class="truncate">გაეცანით ჩვენს კოლექციას</span>
                </button>
@@ -128,7 +153,7 @@
                </div>
                <div class="flex gap-8">
                   <a class="text-sm text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                     href="#">კონფიდენციალურობის პოლიტიკა</a>
+                     href="Privacy Policy.txt" target="_blank">კონფიდენციალურობის პოლიტიკა</a>
                   <a class="text-sm text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                      href="#">მომსახურების პირობები</a>
                   <a class="text-sm text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
@@ -140,8 +165,21 @@
                </div>
             </div>
          </div>
+
       </footer>
    </div>
+   <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
