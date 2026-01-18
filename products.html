@@ -40,9 +40,30 @@
                         <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                             href="contact.html">კონტაქტი</a>
                     </nav>
-                     <button onclick="window.location.href='shop now.html'" class="flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transition-all duration-300 transform hover:scale-105">
+                     <button onclick="window.location.href='shop now.html'" class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transition-all duration-300 transform hover:scale-105">
                         <span class="truncate">შეიძინეთ ახლავე</span>
                      </button>
+
+                     <!-- Mobile Menu Button -->
+                     <button class="md:hidden text-3xl text-[var(--text-primary)]" id="mobile-menu-btn"><span class="material-symbols-outlined">menu</span></button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden flex flex-col items-center gap-4 px-6 py-4 bg-white shadow-md">
+                    <button id="close-mobile-menu" class="self-end text-2xl text-[var(--text-primary)]">&times;</button>
+                    <a href="index.html"
+                       class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">მთავარი</a>
+                    <a href="products.html"
+                       class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">პროდუქტები</a>
+                    <a href="about us.html"
+                       class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">ჩვენს
+                       შესახებ</a>
+                    <a href="contact.html"
+                       class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">კონტაქტი</a>
+                    <button onclick="window.location.href='shop now.html'"
+                       class="min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                       შეიძინეთ ახლავე
+                    </button>
                 </div>
             </header>
             <main class="flex flex-1 flex-col">
@@ -174,6 +195,25 @@
             </main>
         </div>
     </div>
+   <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-mobile-menu");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+
+    if (closeBtn && menu) {
+      closeBtn.addEventListener("click", () => {
+        menu.classList.add("hidden");
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
