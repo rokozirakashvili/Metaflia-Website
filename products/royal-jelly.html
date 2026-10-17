@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html lang="ka">
+
+   <head>
+      <link rel="icon" href="../icons/metaflia-icon.ico" type="image/x-icon" />
+      <title>მეთაფლია | ფუტკრის სადედე რძე</title>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <link href="https://fonts.googleapis.com" rel="preconnect" />
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;display=swap"
+         rel="stylesheet" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+         rel="stylesheet" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script
+         id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#653e00", "background": "#f8f9ff", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#351000", "on-secondary-container": "#76340e", "inverse-surface": "#27313f", "primary": "#805600", "on-primary": "#ffffff", "tertiary-container": "#d28600", "secondary-fixed": "#ffdbcc", "surface-variant": "#d9e3f6", "on-primary-fixed": "#281800", "on-error": "#ffffff", "primary-container": "#ca8a04", "on-surface-variant": "#514535", "inverse-primary": "#ffba46", "on-background": "#121c2a", "tertiary-fixed": "#ffddb8", "on-error-container": "#93000a", "on-tertiary-container": "#452900", "surface": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "surface-bright": "#f8f9ff", "on-surface": "#121c2a", "secondary-container": "#fd9e70", "on-secondary": "#ffffff", "on-primary-fixed-variant": "#614000", "on-tertiary": "#ffffff", "surface-container": "#e6eeff", "outline-variant": "#d5c4ae", "surface-container-high": "#dee9fc", "surface-container-low": "#eff4ff", "outline": "#837562", "primary-fixed": "#ffddb0", "surface-container-highest": "#d9e3f6", "secondary-fixed-dim": "#ffb693", "on-secondary-fixed-variant": "#76330d", "error-container": "#ffdad6", "surface-tint": "#805600", "secondary": "#944a23", "primary-fixed-dim": "#ffba46", "on-tertiary-fixed": "#2a1700", "on-primary-container": "#422a00", "tertiary": "#855300", "inverse-on-surface": "#eaf1ff", "surface-dim": "#d0dbed" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "margin": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "headline-lg": ["Playfair Display"], "title-lg": ["Outfit"], "body-sm": ["Outfit"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "title-md": ["Outfit"], "body-lg": ["Outfit"], "display-mobile": ["Playfair Display"], "body-md": ["Outfit"], "label-sm": ["Outfit"], "label-md": ["Outfit"], "label-lg": ["Outfit"], "headline-md": ["Playfair Display"], "display": ["Playfair Display"] }, "fontSize": { "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "500" }], "headline-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } };</script>
+   </head>
+
+   <body class="bg-surface font-body-md text-on-surface antialiased">
+      <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+         <div class="container mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+               <img src="../icons/metaflia-icon.ico" alt="Metaflia" class="w-8 h-8 object-contain">
+               <a href="../index.html" class="text-2xl font-bold tracking-tight text-[var(--text-primary)]">მეთაფლია</a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+               <a href="../index.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">მთავარი</a>
+               <a href="../products.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">პროდუქტები</a>
+               <a href="../about us.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">ჩვენს
+                  შესახებ</a>
+               <a href="../contact.html"
+                  class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">კონტაქტი</a>
+            </nav>
+
+            <!-- Desktop Button -->
+            <button onclick="window.location.href='../shop now.html'" style="background-color: #f2b90d;"
+               class="hidden md:flex min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transition-all duration-300 transform hover:scale-105">
+               <span class="truncate">შეიძინეთ ახლავე</span>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-3xl text-[var(--text-primary)]" id="mobile-menu-btn">&#9776;</button>
+         </div>
+
+         <!-- Mobile Menu -->
+         <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center gap-4 px-6 py-4 bg-white shadow-md">
+            <a href="../index.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">მთავარი</a>
+            <a href="../products.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">პროდუქტები</a>
+            <a href="../about us.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">ჩვენს
+               შესახებ</a>
+            <a href="../contact.html"
+               class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors">კონტაქტი</a>
+            <button onclick="window.location.href='../shop now.html'"
+               class="min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+               შეიძინეთ ახლავე
+            </button>
+         </div>
+      </header>
+      <main class="w-full pt-20 bg-surface min-h-screen">
+         <div class="flex flex-col w-full">
+            <!-- Subtle Amber Ambient Glow Layer -->
+            <div class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin pt-space-lg pb-space-xl">
+               <!-- Two-Column Product Detail Layout -->
+               <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+                  <!-- Left Column: Gallery -->
+                  <div class="lg:col-span-7 flex flex-col gap-space-md">
+                     <!-- Main Media Stage -->
+                     <div
+                        class="relative aspect-square w-full rounded-xl bg-surface-container-low overflow-hidden shadow-md flex items-center justify-center group">
+                        <!-- Ambient Radial Warmth -->
+                        <div
+                           class="absolute inset-0 bg-gradient-to-tr from-primary-fixed/20 via-transparent to-tertiary-fixed/30 pointer-events-none">
+                        </div>
+                        <!-- Badges -->
+                        <div class="absolute top-space-md left-space-md flex flex-wrap gap-space-xs z-10">
+                           <span
+                              class="bg-primary text-on-primary font-label-md text-label-md px-3 py-1 rounded-full shadow-sm">
+                              გაყიდვადი
+                           </span>
+                           <span
+                              class="bg-surface-container-lowest text-on-surface font-label-md text-label-md px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
+                              <span class="material-symbols-outlined text-[15px] text-primary">verified</span>
+                              100% ორგანული
+                           </span>
+                        </div>
+                        <!-- Hero Image -->
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                           data-alt="თბილი მაკროფოტო: ქარვისფერი მინის ქილაში მოთავსებული ნედლი, კრემისებრი თეთრი სადედე რძე; ბუნებრივი ოქროსფერი თავსახური, ხის თაფლის კოვზიდან ჩამოწვეთებული თაფლი, მუხის მაგიდა, რბილი დღის სინათლე, ფუტკრის ცვილის სანთლები და ბუნებრივი ფიჭა ფონზე."
+                           id="main-product-image" src="../images/royalJellyONHoneyComb.png" />
+                        <!-- Floating Cold Chain Assurance Stamp -->
+                        <div
+                           class="absolute bottom-space-md right-space-md bg-surface-container-lowest/90 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-xs">
+                           <span class="material-symbols-outlined text-tertiary text-[18px]">ac_unit</span>
+                           <span
+                              class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase">შეინახეთ
+                              გრილ ადგილას</span>
+                        </div>
+                     </div>
+                     <!-- Thumbnails Gallery -->
+                     <div class="grid grid-cols-4 gap-space-sm" id="thumbnail-row">
+                        <button
+                           class="thumb-btn active aspect-square rounded-lg bg-surface-container-low overflow-hidden shadow-sm transition-all focus:outline-none ring-2 ring-primary"
+                           type="button">
+                           <img class="w-full h-full object-cover"
+                              data-alt="ქარვისფერი მინის ქილის წინა ხედი მინიმალისტური ეტიკეტით; თბილი კრემისფერი ფონი და რბილი მზის სინათლე"
+                              src="../images/royalJellyONHoneyComb.png" />
+                        </button>
+                        <button
+                           class="thumb-btn aspect-square rounded-lg bg-surface-container-low overflow-hidden shadow-sm transition-all opacity-75 hover:opacity-100 focus:outline-none"
+                           type="button">
+                           <img class="w-full h-full object-cover"
+                              data-alt="სადედე რძის კრემისებრი, მარგალიტისებრი ტექსტურის მაკროკადრი ფიჭის ახალი ნატეხებითა და ქარვისფერი თაფლით"
+                              src="../images/honeycombJelly.jpg" />
+                        </button>
+                        <button
+                           class="thumb-btn aspect-square rounded-lg bg-surface-container-low overflow-hidden shadow-sm transition-all opacity-75 hover:opacity-100 focus:outline-none"
+                           type="button">
+                           <img class="w-full h-full object-cover"
+                              data-alt="პატარა სპილენძის საზომი კოვზი ახალი სადედე რძით, მზით განათებული საუზმის მაგიდის ფონზე"
+                              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCOCc9AiQoVR1aq7SaR7U1X35LYwyMazER4e4XOtAfCyvH-IF4Q8y4OH6PqD1dbrcfYtAgoQJFgv3kp4Xkwt0shvc0lXnoLezbu8CvP07VFTiqRfax1Q7X__93YLAhA7ezSrgFtip_nvtdIXQl1yVhQDCig7-AgaUHQQ0Pofqw9laK0zEXjGID0w1sc6v1pFvtJyMR6giMte5cUtXPJWQRQz-3lskIYSK0Bs2AiRGND2dIBlr1QhDI" />
+                        </button>
+                     </div>
+                  </div>
+                  <!-- Right Column: Product Purchasing Details -->
+                  <div
+                     class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+                     <!-- Header & Social Proof -->
+                     <div class="flex flex-col gap-space-xs">
+                        <div class="flex items-center justify-between gap-space-sm">
+                           <div class="flex items-center gap-1.5">
+                              <div class="flex text-primary">
+                                 <span class="material-symbols-outlined text-[18px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[18px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[18px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[18px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[18px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                              </div>
+                              <span class="font-label-lg text-label-lg font-semibold text-on-surface">5.00</span>
+                           </div>
+                           <div
+                              class="flex items-center gap-1 text-primary bg-primary-fixed/40 px-2 py-0.5 rounded-full font-label-sm text-label-sm">
+                              <span class="material-symbols-outlined text-[14px]">format_image_left</span>
+                              <span>დადასტურებული წარმოშობა</span>
+                           </div>
+                        </div>
+                        <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-xs">
+                           ფუტკრის სადედე რძე
+                        </h1>
+                        <p class="font-title-md text-title-md text-primary font-serif italic">
+                           პრემიუმ ხარისხის
+                        </p>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                           საკვები ნივთიერებებით მდიდარი ახალგაზრდობის ნექტარი,
+                           პირდაპირ მოკრეფილი მაღალმთიანი ალპური ველური ყვავილებიდან.
+                           გაუცხელებელი, ფერმენტულად ცოცხალი და ბუნებრივად კონცენტრირებული
+                           იშვიათი 10-HDA-თი და აღმდგენი ამინომჟავების პროფილებით.
+                        </p>
+                     </div>
+                     <!-- Potency Badge & Lab Metric -->
+                     <div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+                        <div class="flex items-center gap-space-sm">
+                           <div
+                              class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+                              <span class="material-symbols-outlined text-[22px]">science</span>
+                           </div>
+                           <div>
+                              <div class="font-label-md text-label-md text-on-surface font-semibold">10-HDA კონცენტრაცია
+                              </div>
+                              <div class="font-body-sm text-body-sm text-on-surface-variant"> ხარისხის შეფასებისთვის
+                                 მნიშვნელოვანი ცხიმოვანი მჟავა</div>
+                           </div>
+                        </div>
+                        <span class="font-headline-sm text-headline-sm text-primary font-semibold">2.1%</span>
+                     </div>
+                     <div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+                        <div class="flex items-center gap-space-sm">
+                           <div
+                              class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+                              <span class="material-symbols-outlined text-[22px]">bubble_chart</span>
+                           </div>
+                           <div>
+                              <div class="font-label-md text-label-md text-on-surface font-semibold">ლიპიდების(ცხიმების)
+                                 შემცველობა
+                              </div>
+                              <div class="font-body-sm text-body-sm text-on-surface-variant">მათ შორის სპეციფიკური
+                                 ცხიმოვანი მჟავები</div>
+                           </div>
+                        </div>
+                        <span class="font-headline-sm text-headline-sm text-primary font-semibold">3-8%</span>
+                     </div>
+                     <div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+                        <div class="flex items-center gap-space-sm">
+                           <div
+                              class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+                              <span class="material-symbols-outlined text-[22px]">biotech</span>
+                           </div>
+                           <div>
+                              <div class="font-label-md text-label-md text-on-surface font-semibold">ცილების შემცველობა
+                              </div>
+                              <div class="font-body-sm text-body-sm text-on-surface-variant">ბუნებრივი ცილები</div>
+                           </div>
+                        </div>
+                        <span class="font-headline-sm text-headline-sm text-primary font-semibold">9-18%</span>
+                     </div>
+                     <div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+                        <div class="flex items-center gap-space-sm">
+                           <div
+                              class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+                              <span class="material-symbols-outlined text-[22px]">bolt</span>
+                           </div>
+                           <div>
+                              <div class="font-label-md text-label-md text-on-surface font-semibold">ნახშირწყლები</div>
+                              <div class="font-body-sm text-body-sm text-on-surface-variant">ძირითადად გლუკოზა და ფრუქტოზა
+                              </div>
+                           </div>
+                        </div>
+                        <span class="font-headline-sm text-headline-sm text-primary font-semibold">7-18%</span>
+                     </div>
+                     <!-- Size / Weight Selection -->
+                     <div class="flex flex-col gap-space-xs">
+                        <div class="flex justify-between items-center">
+                           <span class="font-label-lg text-label-lg font-semibold text-on-surface">აირჩიეთ ზომა &amp;
+                              კურსი:</span>
+                           <span class="font-body-sm text-body-sm text-primary" id="size-label">5გ (დაახლოებით 25-დღიანი
+                              კურსი)</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-space-xs max-w-sm w-full mx-auto">
+                           <button
+                              class="size-pill py-2.5 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold text-center transition-all shadow-sm"
+                              data-duration="5გ (დაახლოებით 25-დღიანი კურსი)" data-price="25.00" data-size="5გ"
+                              data-sub="25.00" type="button">
+                              5გ <span class="block text-[11px] font-normal text-on-surface-variant">საწყისი კურსი</span>
+                           </button>
+                           <button
+                              class="size-pill py-2.5 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold text-center transition-all hover:bg-surface-container-high"
+                              data-duration="10გ (დაახლოებით 50-დღიანი კურსი)" data-price="50.00" data-size="10გ"
+                              data-sub="73.10" type="button">
+                              10გ
+                           </button>
+                        </div>
+                     </div>
+                     <div class="pt-space-xs">
+                        <div
+                           class="bg-primary text-on-primary font-label-lg text-label-lg py-3.5 px-space-md rounded-lg shadow-md flex items-center justify-center">
+                           <span id="price-label">ფასი 25.00₾</span>
+                        </div>
+                     </div>
+                     <!-- Trust Badges & Guarantee Matrix -->
+                     <div
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs max-w-xl mx-auto text-on-surface-variant text-[12px] leading-snug">
+                        <div
+                           class="flex items-center justify-center gap-2 p-2 rounded bg-surface-container-low text-center">
+                           <span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+                           <span>ადგილზე მიტანის სერვისი 5₾</span>
+                        </div>
+                        <div
+                           class="flex items-center justify-center gap-2 p-2 rounded bg-surface-container-low text-center">
+                           <span class="material-symbols-outlined text-primary text-[20px]">thermostat</span>
+                           <span>მიწოდება ტემპერატურული რეჟიმის დაცვით</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Section 2: Key Benefits (Visual Bento Icons) -->
+               <div class="mt-space-xl pt-space-lg">
+                  <div class="text-center max-w-2xl mx-auto mb-space-lg">
+                     <span class="font-label-md text-label-md text-primary tracking-widest uppercase font-semibold">ცოცხალი
+                        ენერგიის წყარო</span>
+                     <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">ბუნებრივი ზრუნვა ორგანიზმისთვის
+                     </h2>
+                     <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                        ფუტკრის სადედე რძე დედა ფუტკრის ერთადერთი საკვებია და მის ათჯერ უფრო ხანგრძლივ სიცოცხლესა და
+                        განსაკუთრებულ ნაყოფიერებას განაპირობებს.
+                     </p>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+                     <!-- Benefit 1 -->
+                     <div
+                        class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+                           <span class="material-symbols-outlined text-[28px]">vital_signs</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface font-semibold">უჯრედების გამძლეობა</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                           ბუნებრივად შეიცავს 10-Hydroxy-2-decenoic acid-ს (10-HDA) — უნიკალურ ცხიმოვან მჟავას, რომელიც
+                           ხელს უწყობს უჯრედების გამძლეობასა და მიტოქონდრიების მთლიანობის შენარჩუნებას.
+                        </p>
+                     </div>
+                     <!-- Benefit 2 -->
+                     <div
+                        class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                        <div
+                           class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+                           <span class="material-symbols-outlined text-[28px]">shield</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface font-semibold">იმუნური დაცვის მხარდაჭერა
+                        </h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                           ბუნებრივი როიალისინის კონცენტრირებული პეპტიდები ხელს უწყობს ლორწოვანი გარსების დამცავი
+                           ბარიერისა და ორგანიზმის ბიოლოგიური წონასწორობის შენარჩუნებას.
+                        </p>
+                     </div>
+                     <!-- Benefit 3 -->
+                     <div
+                        class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+                           <span class="material-symbols-outlined text-[28px]">neurology</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface font-semibold">გონებრივი კონცენტრაცია</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                           ხელს უწყობს აცეტილქოლინისა და ტვინის ნეიროტროფული ფაქტორის (BDNF) წარმოქმნას, რაც მეხსიერების,
+                           კონცენტრაციისა და დღის განმავლობაში ენერგიის შენარჩუნებას უწყობს ხელს.
+                        </p>
+                     </div>
+                     <!-- Benefit 4 -->
+                     <div
+                        class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                        <div
+                           class="w-12 h-12 rounded-lg bg-primary-fixed-dim/40 flex items-center justify-center text-primary">
+                           <span class="material-symbols-outlined text-[28px]">face_retouching_natural</span>
+                        </div>
+                        <h3 class="font-title-md text-title-md text-on-surface font-semibold">კანის ბუნებრივი ბზინვარება
+                        </h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                           ხელს უწყობს I ტიპის პროკოლაგენის წარმოქმნას, კანის ელასტიკურობისა და დატენიანების შენარჩუნებას
+                           და მის უფრო გლუვ, ჯანსაღ იერს.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Section 3: Deep-Dive Interactive Details & Apiary Specifications -->
+               <div class="mt-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+                  <!-- Accordion Details Column -->
+                  <div class="lg:col-span-7 flex flex-col gap-space-sm">
+                     <h2 class="font-headline-md text-headline-md text-on-surface mb-space-xs">პროდუქტის მახასიათებლები
+                        და გამოყენების წესი</h2>
+                     <!-- Accordion Item 1 -->
+                     <div class="rounded-lg bg-surface-container-lowest shadow-sm overflow-hidden">
+                        <button
+                           class="accordion-toggle w-full px-space-md py-space-md text-left flex items-center justify-between font-title-md text-title-md text-on-surface font-medium hover:bg-surface-container-low transition-colors"
+                           type="button">
+                           <span class="flex items-center gap-space-sm">
+                              <span class="material-symbols-outlined text-primary text-[22px]">biotech</span>
+                              შემადგენლობა და ბიოქიმიური მახასიათებლები
+                           </span>
+                           <span
+                              class="material-symbols-outlined text-on-surface-variant accordion-icon transition-transform">expand_more</span>
+                        </button>
+                        <div
+                           class="accordion-content px-space-md pb-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+                           <p>ფუტკრის სადედე რძე-ჯანმრთელობის ელექსირი
+                              დადგენილია,რომ ბუნებაში არ არსებობს ფუტკრის სადედე რძეზე ბიოლოგიურად უფრო აქტიური პროდუქტი
+                              ცოცოხალი ორგანიზმის გამრავლების,განვითარებისა და გაახალგაზრდავებისათვის.იგი წარმოადგენს
+                              ერთადერთ პროდუქტს რომელიც შეიცავს ორგანიზმისთვის ყველა საჭირო ამინომჟავას(მათ შორის 10
+                              მათგანი მხოლოდ და მხოლოდ ფუტკრის სადედე რძეშია),ვიტამინებს(B1;B2;B5;B6;B12;C;D;A;E;PP)
+                              300-მდე მიკროელემენტებს. მხოლოდ და მხოლოდ ფუტკრის სადედე რძეში არსებობს გამაახალგაზრდავებელი
+                              ჰორმონი იუვენილური.
+                              ფუტკრის სადედე რძეს ბუნებაში ანალოგი არ მოეპოვება უშვილობის სამკურნალოდ და ჩანასახვიდანვე
+                              ადამიანის გონებრივი და ფიზიკური განვითარებისათვის.
+                              გადაღლილობისას შეუძლია ენერგიის სწრაფი აღდგენა.
+                              ფუტკრის სადედე რძე მნიშვნელოვნად ზრდის სიცოცხლის ხანგრძლივობას.შესამჩნევად აუმჯობესებს
+                              მხედველობას და მეხსიერებას.ააქტიურებს შინაგანი სეკრეციის ჯირკვლების მოქმედებას(განსაკუთრებით
+                              სასქესო ჯირკვლების),ხელს უშლის ყოველგვარი სიმსივნის წარმოქმნას.ამცირებს სისხლში შაქრის
+                              დონეს.აუმჯობესებს გულ-სისხლძარღვთა სისტემის მუშაობას.აღადგენს და აძლიერებს იმუნურ
+                              სისტემას,ახდენს არტერიული წნევის რეგულირებას.
+                              ფუტკრის სადედე რძე ძალზედ ეფექტურია პროსტატიტისა და პროსტატის</p>
+                           <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+                              <div class="p-space-sm rounded bg-surface-container-low">
+                                 <span class="font-semibold text-on-surface block">სისუფთავე:</span> 100% ახალი,
+                                 არაპასტერიზებული ფუტკრის სადედე რძე
+                              </div>
+                              <div class="p-space-sm rounded bg-surface-container-low">
+                                 <span class="font-semibold text-on-surface block">10-HDA შემცველობა:</span>
+                                 სტანდარტიზებული, მინიმუმ &gt;2.1%
+                              </div>
+                              <div class="p-space-sm rounded bg-surface-container-low">
+                                 <span class="font-semibold text-on-surface block">დანამატები და შაქარი:</span> 0.00%,
+                                 სინთეზური შემავსებლების გარეშე
+                              </div>
+                              <div class="p-space-sm rounded bg-surface-container-low">
+                                 <span class="font-semibold text-on-surface block">ტენიანობა:</span> დაბალანსებული 65%,
+                                 ბუნებრივი წყალი
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Accordion Item 2 -->
+                     <div class="rounded-lg bg-surface-container-lowest shadow-sm overflow-hidden">
+                        <button
+                           class="accordion-toggle w-full px-space-md py-space-md text-left flex items-center justify-between font-title-md text-title-md text-on-surface font-medium hover:bg-surface-container-low transition-colors"
+                           type="button">
+                           <span class="flex items-center gap-space-sm">
+                              <span class="material-symbols-outlined text-primary text-[22px]">schedule</span>
+                              გამოყენების წესი და რეკომენდებული დოზა
+                           </span>
+                           <span
+                              class="material-symbols-outlined text-on-surface-variant accordion-icon transition-transform">expand_more</span>
+                        </button>
+                        <div
+                           class="accordion-content px-space-md pb-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+                           <ol class="list-decimal list-inside space-y-2 pt-space-xs">
+                              <li><strong class="text-on-surface">როდის მივიღოთ?:</strong> ფუტკრის რძე მიიღება უზმოზე,
+                                 ჭამამდე 30წთ-ით ადრე, დღის პირველ ნახევარში.</li>
+                              <li><strong class="text-on-surface">როგორ მივიღოთ?</strong> ვითავსებთ ენის ქვეშ გაწოვამდე
+                                 რათა პროდუქტი ნელა გაიხსნას.</li>
+                              <li><strong class="text-on-surface">რა დოზით მივიღოთ?</strong>0.1 გრამი ანუ შპრიცზე დატანილი
+                                 1 დანაყოფი.</li>
+                           </ol>
+                        </div>
+                     </div>
+                     <!-- Accordion Item 4 -->
+                     <div class="rounded-lg bg-surface-container-lowest shadow-sm overflow-hidden">
+                        <button
+                           class="accordion-toggle w-full px-space-md py-space-md text-left flex items-center justify-between font-title-md text-title-md text-on-surface font-medium hover:bg-surface-container-low transition-colors"
+                           type="button">
+                           <span class="flex items-center gap-space-sm">
+                              <span class="material-symbols-outlined text-tertiary text-[22px]">kitchen</span>
+                              ცივად შენახვა და მიწოდება
+                           </span>
+                           <span
+                              class="material-symbols-outlined text-on-surface-variant accordion-icon transition-transform">expand_more</span>
+                        </button>
+                        <div
+                           class="accordion-content px-space-md pb-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+                           <p>ნამდვილი, ნედლი და ფერმენტულად აქტიური სადედე რძე ხანგრძლივი სიცხისგან უნდა დაიცვათ.
+                              შეკვეთას ვაგზავნით ცივს, ყინულთან ერთად. მიღებისთანავე შეინახეთ მაცივარში.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Section 4: Verified Customer Reviews -->
+               <div class="mt-space-xl pt-space-xl" id="reviews-section">
+                  <div class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-md">
+                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg pb-space-lg">
+                        <!-- Rating Summary -->
+                        <div class="lg:col-span-4 flex flex-col justify-center">
+                           <span
+                              class="font-label-md text-label-md uppercase tracking-wider text-primary font-semibold">მომხმარებელთა
+                              შეფასებები</span>
+                           <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">5 დან 5</h2>
+                           <div class="flex text-primary my-2">
+                              <span class="material-symbols-outlined text-[24px]"
+                                 style="font-variation-settings: 'FILL' 1;">star</span>
+                              <span class="material-symbols-outlined text-[24px]"
+                                 style="font-variation-settings: 'FILL' 1;">star</span>
+                              <span class="material-symbols-outlined text-[24px]"
+                                 style="font-variation-settings: 'FILL' 1;">star</span>
+                              <span class="material-symbols-outlined text-[24px]"
+                                 style="font-variation-settings: 'FILL' 1;">star</span>
+                              <span class="material-symbols-outlined text-[24px]"
+                                 style="font-variation-settings: 'FILL' 1;">star</span>
+                           </div>
+                           <p class="font-body-sm text-body-sm text-on-surface-variant">348 დადასტურებული მომხმარებლის
+                              შეფასების საფუძველზე. 98% მეგობარსაც ურჩევდა.</p>
+                        </div>
+                        <!-- Progress Bars Breakdown -->
+                        <div class="lg:col-span-8 flex flex-col justify-center gap-space-xs">
+                           <div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface">
+                              <span class="w-12">5 ვარსკვლავი</span>
+                              <div class="flex-1 h-2.5 rounded-full bg-surface-container overflow-hidden">
+                                 <div class="h-full bg-primary-container rounded-full" style="width: 92%"></div>
+                              </div>
+                              <span class="w-10 text-right text-on-surface-variant">92%</span>
+                           </div>
+                           <div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface">
+                              <span class="w-12">4 ვარსკვლავი</span>
+                              <div class="flex-1 h-2.5 rounded-full bg-surface-container overflow-hidden">
+                                 <div class="h-full bg-primary-container rounded-full" style="width: 6%"></div>
+                              </div>
+                              <span class="w-10 text-right text-on-surface-variant">6%</span>
+                           </div>
+                           <div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface">
+                              <span class="w-12">3 ვარსკვლავი</span>
+                              <div class="flex-1 h-2.5 rounded-full bg-surface-container overflow-hidden">
+                                 <div class="h-full bg-primary-container rounded-full" style="width: 1%"></div>
+                              </div>
+                              <span class="w-10 text-right text-on-surface-variant">1%</span>
+                           </div>
+                           <div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface">
+                              <span class="w-12">2 ვარსკვლავი</span>
+                              <div class="flex-1 h-2.5 rounded-full bg-surface-container overflow-hidden">
+                                 <div class="h-full bg-primary-container rounded-full" style="width: 0.5%"></div>
+                              </div>
+                              <span class="w-10 text-right text-on-surface-variant">&lt;1%</span>
+                           </div>
+                           <div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface">
+                              <span class="w-12">1 ვარსკვლავი</span>
+                              <div class="flex-1 h-2.5 rounded-full bg-surface-container overflow-hidden">
+                                 <div class="h-full bg-primary-container rounded-full" style="width: 0.5%"></div>
+                              </div>
+                              <span class="w-10 text-right text-on-surface-variant">&lt;1%</span>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Featured Testimonials Grid -->
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-lg">
+                        <!-- Review 1 -->
+                        <div
+                           class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-md">
+                           <div>
+                              <div class="flex text-primary mb-2">
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                              </div>
+                              <h4 class="font-title-sm text-title-sm font-semibold text-on-surface">„დილით გონება გაცილებით
+                                 ნათელი და კონცენტრირებულია“</h4>
+                              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                                 ასეთი სიახლე იშვიათია. მაღაზიის ფხვნილებისა და კაფსულებისგან განსხვავებით, ნედლ სადედე
+                                 რძეს დამახასიათებელი ოდნავ მომჟავო გემო აქვს. 10 დღეში დღის სამ საათზე გონებრივი
+                                 დაღლილობის შეგრძნება სრულიად გამიქრა.
+                              </p>
+                           </div>
+                           <div
+                              class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-2">
+                              <span class="font-semibold text-on-surface">ე.დოლიძე</span>
+                              <span class="flex items-center gap-1 text-primary"><span
+                                    class="material-symbols-outlined text-[14px]">check_circle</span> აქტიური და მუდმივი
+                                 მომხმარებელი</span>
+                           </div>
+                        </div>
+                        <!-- Review 2 -->
+                        <div
+                           class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-md">
+                           <div>
+                              <div class="flex text-primary mb-2">
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                 <span class="material-symbols-outlined text-[16px]"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                              </div>
+                              <h4 class="font-title-sm text-title-sm font-semibold text-on-surface">„იდეალურად ცივი და
+                                 დაუზიანებელი ჩამოვიდა“</h4>
+                              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                                 ზაფხულში ტრანსპორტირების მეშინოდა, მაგრამ ყინულის პაკეტებთან ერთად
+                                 დაუზიანებლად ჩამოვიდა. კრემისებრი, ოქროსფერ-თეთრი ტექსტურა სამკურნალო ელექსირს
+                                 ჰგავს.
+                              </p>
+                           </div>
+                           <div
+                              class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-2">
+                              <span class="font-semibold text-on-surface">მ.ბერიძე</span>
+                              <span class="flex items-center gap-1 text-primary"><span
+                                    class="material-symbols-outlined text-[14px]">check_circle</span> აქტიური და მუდმივი
+                                 მომხმარებელი</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Interactive Logic Script for PDP Behaviors -->
+            <script>
+               (function initPDP() {
+                  // DOM Elements
+                  const mainImg = document.getElementById('main-product-image');
+                  const thumbBtns = document.querySelectorAll('.thumb-btn');
+                  const sizePills = document.querySelectorAll('.size-pill');
+                  const sizeLabel = document.getElementById('size-label');
+                  const priceLabel = document.getElementById('price-label');
+
+                  let currentBasePrice = Number(sizePills[0].getAttribute('data-price'));
+
+                  // Thumbnail Switcher
+                  thumbBtns.forEach((btn) => {
+                     btn.addEventListener('click', () => {
+                        thumbBtns.forEach(b => {
+                           b.classList.remove('ring-2', 'ring-primary', 'opacity-100');
+                           b.classList.add('opacity-75');
+                        });
+                        btn.classList.add('ring-2', 'ring-primary', 'opacity-100');
+                        btn.classList.remove('opacity-75');
+
+                        const clickedImg = btn.querySelector('img');
+                        if (clickedImg && mainImg) {
+                           mainImg.src = clickedImg.src;
+                           if (clickedImg.hasAttribute('data-alt')) {
+                              mainImg.setAttribute('data-alt', clickedImg.getAttribute('data-alt'));
+                           }
+                        }
+                     });
+                  });
+
+                  // Size Pill Switcher
+                  sizePills.forEach((pill) => {
+                     pill.addEventListener('click', () => {
+                        sizePills.forEach(p => {
+                           p.classList.remove('bg-surface-container-high', 'text-on-surface');
+                           p.classList.add('bg-surface-container');
+                        });
+                        pill.classList.remove('bg-surface-container');
+                        pill.classList.add('bg-surface-container-high');
+
+                        currentBasePrice = Number(pill.getAttribute('data-price'));
+                        sizeLabel.textContent = pill.getAttribute('data-duration');
+
+                        updatePrice();
+                     });
+                  });
+
+                  function updatePrice() {
+                     priceLabel.textContent = `ფასი ${currentBasePrice.toFixed(2)}₾`;
+                  }
+
+                  // Accordion Interactions
+                  const accordions = document.querySelectorAll('.accordion-toggle');
+                  accordions.forEach((btn, idx) => {
+                     const content = btn.nextElementSibling;
+                     const icon = btn.querySelector('.accordion-icon');
+
+                     // Open first item by default
+                     if (idx !== 0) {
+                        content.classList.add('hidden');
+                     } else {
+                        icon.style.transform = 'rotate(180deg)';
+                     }
+
+                     btn.addEventListener('click', () => {
+                        const isHidden = content.classList.contains('hidden');
+                        if (isHidden) {
+                           content.classList.remove('hidden');
+                           icon.style.transform = 'rotate(180deg)';
+                        } else {
+                           content.classList.add('hidden');
+                           icon.style.transform = 'rotate(0deg)';
+                        }
+                     });
+                  });
+               })();
+            </script>
+         </div>
+      </main>
+      <footer class="w-full bg-surface-container-low shadow-[0_-1px_12px_rgba(120,53,15,0.03)]">
+         <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-lg">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pb-space-xl">
+               <div
+                  class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-[0_2px_8px_rgba(120,53,15,0.04)]">
+                  <span class="material-symbols-outlined text-primary text-[32px]">eco</span>
+                  <div>
+                     <h4 class="font-title-md text-title-md text-on-surface">100% ნედლი</h4>
+                     <p class="font-body-sm text-body-sm text-on-surface-variant">შენარჩუნებული ფერმენტები და ცოცხალი
+                        ყვავილის მტვერი</p>
+                  </div>
+               </div>
+               <div
+                  class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-[0_2px_8px_rgba(120,53,15,0.04)]">
+                  <span class="material-symbols-outlined text-primary text-[32px]">hive</span>
+                  <div>
+                     <h4 class="font-title-md text-title-md text-on-surface">ფუტკარზე ზრუნვა</h4>
+                     <p class="font-body-sm text-body-sm text-on-surface-variant">ფრთხილი მოპოვება და ფუტკრის კეთილდღეობაზე
+                        ზრუნვა</p>
+                  </div>
+               </div>
+               <div
+                  class="flex items-center gap-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-[0_2px_8px_rgba(120,53,15,0.04)]">
+                  <span class="material-symbols-outlined text-primary text-[32px]">verified</span>
+                  <div>
+                     <h4 class="font-title-md text-title-md text-on-surface">ლაბორატორიულად შემოწმებული</h4>
+                  </div>
+               </div>
+            </div>
+                     <div class="container mx-auto px-6 py-12">
+               <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                  <div class="flex flex-col gap-2">
+                     <h3 class="text-lg font-bold">მეთაფლია</h3>
+                     <p class="text-sm text-[var(--text-secondary)]">© 2026 მეთაფლია. ყველა უფლება დაცულია.</p>
+                  </div>
+                  <div class="flex gap-8">
+                     <a class="text-sm text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                        href="Privacy Policy.txt" target="_blank">კონფიდენციალურობის პოლიტიკა</a>
+                     <a class="text-sm text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                        href="#">მომსახურების პირობები</a>
+                     <a class="text-sm text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                        href="contact.html">კონტაქტი</a>
+                  </div>
+                  <div class="flex gap-4">
+                     <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="#">
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
