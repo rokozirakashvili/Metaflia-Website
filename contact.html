@@ -8,11 +8,17 @@
   <link rel="stylesheet" href="products.css">
   <link rel="stylesheet" href="contact.css">
   <link rel="icon" href="icons/metaflia-icon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
   <link as="style"
     href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700"
     onload="this.rel='stylesheet'" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    #mobile-menu[hidden] {
+      display: none !important;
+    }
+  </style>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 
@@ -48,14 +54,15 @@
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
-               <button id="menu-btn" class="text-[var(--text-primary)] focus:outline-none text-3xl">
+               <button id="menu-btn" aria-controls="mobile-menu" aria-expanded="false" aria-label="მენიუს გახსნა"
+                   class="text-[var(--text-primary)] focus:outline-none text-3xl" type="button">
                   &#9776; <!-- ☰ სამი ხაზი -->
                </button>
             </div>
          </div>
 
          <!-- Mobile Menu (დამალული default) -->
-         <div id="mobile-menu" class="hidden flex-col md:hidden bg-white shadow-md">
+         <div id="mobile-menu" class="md:hidden bg-white shadow-md" hidden>
             <div class="flex flex-col md:flex-row items-center gap-4 px-6 py-4">
                <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                   href="index.html">მთავარი</a>
@@ -64,8 +71,6 @@
                <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                   href="about us.html">ჩვენს შესახებ</a>
                <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                  href="#">ბლოგი</a>
-               <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                   href="contact.html">კონტაქტი</a>
                <button onclick="window.location.href='shop now.html'"
                   class="min-w-[84px] items-center justify-center rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--bg-dark)] text-sm font-bold shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
@@ -73,15 +78,37 @@
                </button>
             </div>
          </div>
-   <script defer>
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
+   <script>
+      (() => {
+         const menuBtn = document.getElementById("menu-btn");
+         const mobileMenu = document.getElementById("mobile-menu");
 
-      if (menuBtn && mobileMenu) {
+         if (!menuBtn || !mobileMenu) return;
+
+         const closeMenu = () => {
+            mobileMenu.hidden = true;
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "მენიუს გახსნა");
+         };
+
          menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
+            const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+            mobileMenu.hidden = isExpanded;
+            menuBtn.setAttribute("aria-expanded", String(!isExpanded));
+            menuBtn.setAttribute("aria-label", isExpanded ? "მენიუს გახსნა" : "მენიუს დახურვა");
          });
-      }
+
+         mobileMenu.querySelectorAll("a, button").forEach((item) => {
+            item.addEventListener("click", closeMenu);
+         });
+
+         document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && menuBtn.getAttribute("aria-expanded") === "true") {
+               closeMenu();
+               menuBtn.focus();
+            }
+         });
+      })();
    </script>
 
       </header>
@@ -147,17 +174,19 @@
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#181611]"
                     for="name">სახელი</label> <input
                     class="form-input flex w-full rounded-lg border border-[#e6e3db] bg-transparent px-3 py-2 text-sm text-[#181611] placeholder:text-[#8a8060] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)]"
-                    id="name" name="from_name" placeholder="შეიყვანეთ თქვენი სახელი" /> </div>
+                    id="name" name="first_name" placeholder="შეიყვანეთ თქვენი სახელი" type="text" required /> </div>
                 <div class="space-y-2"> <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#181611]"
                     for="email">ელ. ფოსტა</label> <input
                     class="form-input flex w-full rounded-lg border border-[#e6e3db] bg-transparent px-3 py-2 text-sm text-[#181611] placeholder:text-[#8a8060] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)]"
-                    id="email" name="from_email" placeholder="შეიყვანეთ თქვენი ელ. ფოსტა" type="email" /> </div>
+                    id="email" name="user_email" placeholder="შეიყვანეთ თქვენი ელ. ფოსტა" type="email" required /> </div>
                 <div class="space-y-2"> <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#181611]"
                     for="message">შეტყობინება</label> <textarea
                     class="form-textarea flex w-full rounded-lg border border-[#e6e3db] bg-transparent px-3 py-2 text-sm text-[#181611] placeholder:text-[#8a8060] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)] min-h-[120px]"
-                    id="message" name="message" placeholder="შეიყვანეთ თქვენი შეტყობინება"></textarea> </div> <button
+                    id="message" name="message" placeholder="შეიყვანეთ თქვენი შეტყობინება" required></textarea> </div>
+                <p id="form-status" class="text-sm text-[#8a8060]" aria-live="polite"></p>
+                <button
                   class="inline-flex items-center justify-center rounded-lg text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-6 w-full bg-[var(--primary-color)] text-[#181611] hover:bg-yellow-400"
                   type="submit">გაგზავნა</button>
               </form>
@@ -169,27 +198,44 @@
   </div>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function () {
-      emailjs.init('dD5apLEDBifmBvtDg'); // შენი Public Key
-    })();
-
     const form = document.getElementById('contact-form');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const formStatus = document.getElementById('form-status');
+    let emailJsReady = false;
 
-    form.addEventListener('submit', function (event) {
+    try {
+      if (!window.emailjs) {
+        throw new Error('EmailJS SDK failed to load');
+      }
+
+      window.emailjs.init({ publicKey: 'dD5apLEDBifmBvtDg' });
+      emailJsReady = true;
+    } catch (error) {
+      console.error('EmailJS initialization failed:', error);
+    }
+
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
-      if (!this.checkValidity()) {
-        alert('გთხოვთ, შეავსოთ ყველა სავალდებულო ველი.');
+      if (!form.reportValidity()) return;
+
+      if (!emailJsReady) {
+        formStatus.textContent = 'გაგზავნა ვერ მოხერხდა. გთხოვთ, მოგვიანებით სცადოთ.';
         return;
       }
 
-      emailjs.sendForm('service_w47to2c', 'template_5s2ac35', this)
-        .then(function () {
-          window.location.href = "thankyou.html";
-        }, function (error) {
-          alert('შეტყობინების გაგზავნა ვერ მოხერხდა, სცადეთ მოგვიანებით.');
-          console.log('FAILED...', error);
-        });
+      submitButton.disabled = true;
+      formStatus.textContent = 'იგზავნება...';
+
+      try {
+        await window.emailjs.sendForm('service_w47to2c', 'template_5s2ac35', form);
+        window.location.href = 'thankyou.html';
+      } catch (error) {
+        console.error('EmailJS form submission failed:', error);
+        formStatus.textContent = 'შეტყობინების გაგზავნა ვერ მოხერხდა. გთხოვთ, მოგვიანებით სცადოთ.';
+      } finally {
+        submitButton.disabled = false;
+      }
     });
   </script>
 

@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="about us.css">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
     <link as="style"
         href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700"
         onload="this.rel='stylesheet'" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        #mobile-menu[hidden] {
+            display: none !important;
+        }
+    </style>
     <title>მეთაფლია</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
@@ -50,14 +56,15 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="menu-btn" class="text-[var(--text-primary)] focus:outline-none text-3xl">
+                    <button id="menu-btn" aria-controls="mobile-menu" aria-expanded="false" aria-label="მენიუს გახსნა"
+                        class="text-[var(--text-primary)] focus:outline-none text-3xl" type="button">
                         &#9776; <!-- ☰ სამი ხაზი -->
                     </button>
                 </div>
             </div>
 
             <!-- Mobile Menu (დამალული default) -->
-            <div id="mobile-menu" class="hidden flex-col md:hidden bg-white shadow-md">
+            <div id="mobile-menu" class="md:hidden bg-white shadow-md" hidden>
                 <div class="flex flex-col md:flex-row items-center gap-4 px-6 py-4">
                     <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                         href="index.html">მთავარი</a>
@@ -65,8 +72,6 @@
                         href="products.html">პროდუქტები</a>
                     <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                         href="about us.html">ჩვენს შესახებ</a>
-                    <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                        href="#">ბლოგი</a>
                     <a class="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
                         href="contact.html">კონტაქტი</a>
                     <button onclick="window.location.href='shop now.html'"
@@ -78,12 +83,36 @@
 
         </header>
         <script>
-            const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
+            (() => {
+                const menuBtn = document.getElementById("menu-btn");
+                const mobileMenu = document.getElementById("mobile-menu");
 
-            menuBtn.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
-            });
+                if (!menuBtn || !mobileMenu) return;
+
+                const closeMenu = () => {
+                    mobileMenu.hidden = true;
+                    menuBtn.setAttribute("aria-expanded", "false");
+                    menuBtn.setAttribute("aria-label", "მენიუს გახსნა");
+                };
+
+                menuBtn.addEventListener("click", () => {
+                    const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+                    mobileMenu.hidden = isExpanded;
+                    menuBtn.setAttribute("aria-expanded", String(!isExpanded));
+                    menuBtn.setAttribute("aria-label", isExpanded ? "მენიუს გახსნა" : "მენიუს დახურვა");
+                });
+
+                mobileMenu.querySelectorAll("a, button").forEach((item) => {
+                    item.addEventListener("click", closeMenu);
+                });
+
+                document.addEventListener("keydown", (event) => {
+                    if (event.key === "Escape" && menuBtn.getAttribute("aria-expanded") === "true") {
+                        closeMenu();
+                        menuBtn.focus();
+                    }
+                });
+            })();
         </script>
         <div class="flex-grow">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
@@ -95,7 +124,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="w-full h-full rounded-xl overflow-hidden">
                         <img alt="Honey jars and honeycomb" class="w-full h-full object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU2kObiphbY_u5sb-FoPcebC5wX0Dm6u72IHKvruTa-S8lElL7chZejAlJ_3WUo4zoVMFMuzlDzhi1JfruuC7EOA5eO5J_WC4tGmYN0wCZkH7rZ-JTLu5SHDMfZZhZF66joVlznC4wXXeaHz3qOcf43WuUnAGQP5K8t0sI2qxwcQ1Gjb-HbnSQQ8VeDG2tAx_LxEYED8nIOZeW9XTTnQ0C3oRrb7ZXkZ-Mfoa_EU5vvKaUuyBKQpUnX88R6ppUJGPDOe5qjoO8IOw" />
+                            src="http://metaplia.ge/old/og_logo.jpg" />
                     </div>
                     <div class="space-y-8">
                         <div>
